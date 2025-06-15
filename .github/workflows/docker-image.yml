@@ -19,4 +19,5 @@ jobs:
       run: docker build . --file Dockerfile --tag neolinux/hamdashboard:latest
     - name: push image to docker hub
       run: |
+        docker login -u neolinux -p ${{ secrets.DOCKER_HUB_TOKEN }}
         docker push neolinux/hamdashboard:latest
