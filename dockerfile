@@ -1,5 +1,5 @@
 # Usa nginx standard con privilegi (default è root)
-FROM nginx:1.27.0
+FROM nginx:stable
 
 # Rimuove i contenuti di default
 RUN rm -rf /usr/share/nginx/html/*
