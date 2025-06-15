@@ -15,8 +15,11 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
+      with:
+        submodules: recursive
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag neolinux/hamdashboard:latest
+      run: |
+        docker build . --file Dockerfile --tag neolinux/hamdashboard:latest
     - name: push image to docker hub
       run: |
         docker login -u neolinux -p ${{ secrets.DOCKER_HUB_TOKEN }}
