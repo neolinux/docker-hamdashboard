@@ -1,0 +1,12 @@
+services:
+  hamdashboard:
+    image: hamdashboard-custom:latest
+    container_name: hamdashboard
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - TZ=Europe/Berlin
+    #volumes:
+    #  - /mnt/synology/docker/docker01/stacks/hamdashboard/config/config.js:/usr/share/nginx/html/config.js:rw
+
