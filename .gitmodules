@@ -1,0 +1,3 @@
+[submodule "hamdashboard"]
+	path = hamdashboard
+	url = https://github.com/VA3HDL/hamdashboard.git
